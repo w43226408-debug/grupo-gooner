@@ -1,0 +1,140 @@
+<!--Html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="tabua">
+<!-- botao de home aqui-->
+    <button class="homeb">
+    <img id="casinha" src="casa.png">
+    <p id="home">HOME</p>
+  </button>
+<!--botao de conta aqui-->
+    <button class="botao">
+    <img id="foto" src="perfil-de-usuario.png">
+      <br>
+    <p id="conta">SUA CONTA</p>
+</button>
+<!--botao de ajuda aqui-->
+<button id="botaoaqui" class="help">
+<img id="martelo" src="ferramenta-de-martelo.png">
+<p id="phelp">Problemas e bugs</p>
+</button>
+
+</div>
+<!--modal aqui-->
+<div id="meumodal">
+  <h1 id="problema">Presenciou algum problema ou bug?</h1>
+  <p id="reporte">Reporte para nossa equipe, avisaremos por email sobre em breve.</p>
+<input placeholder="digite seu nome">
+
+<button id="fecharmodal">❌</button>
+</div>
+
+
+<script src="javas.js"></script>
+</body>
+</html>
+let botao = document.getElementById("botaoaqui");
+let botaofechar = document.getElementById("fecharmodal")
+let modal = document.getElementById("meumodal");
+
+botao.addEventListener("click", function(){
+modal.style.display = "block"
+})
+
+botaofechar.addEventListener("click", function(){
+modal.style.display = "none"
+})
+
+html, body {
+margin: 0;
+padding: 0;
+}
+.tabua{
+background-color: blueviolet;
+width: 99.7%;
+height: 175px;
+padding: 1px;
+display:flex;
+align-items: center;
+}
+img{
+width: 175px;
+height: 175px;
+}
+#home{
+background-color: transparent;
+font-size: 5vh;
+margin-left: 12%;
+}
+.botao{
+background-color: transparent;
+margin-left: 12%;
+width:25vh;
+}
+#foto{
+
+width:90px;
+height:auto;
+}
+#conta{
+background-color: transparent;
+font-size: 3vh;
+}
+.help{
+background-color: transparent;
+margin-left: 12%;
+padding:1px;
+width:28vh;
+}
+#martelo{
+width:90px;
+height:auto;
+}
+#phelp{
+font-size: 3vh;
+}
+.homeb{
+background-color: transparent;
+margin-left: 12%;
+padding:1px;
+width:25vh;
+}
+#home{
+margin-left: auto;
+font-size: 3vh;
+}
+#casinha{
+width:90px;
+height:auto;
+}
+
+#meumodal{
+padding-top: 10px;
+display:none;
+justify-content: center;
+margin:50px auto 0 auto;
+background-color: black;
+border: 10px;
+width:100vh;
+height:60vh;
+
+}
+#problema{
+justify-content: center;
+display:flex;
+color:aliceblue;
+}
+#reporte{
+justify-content: center;
+display:flex;
+color:aliceblue;
+}
